@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:8000'
+const API_URL = 'https://cobraflow-backend-production-6ef7.up.railway.app'
 
 function getToken() {
   return localStorage.getItem('token')

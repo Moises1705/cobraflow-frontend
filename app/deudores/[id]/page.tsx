@@ -28,8 +28,8 @@ export default function DeudorDetallePage() {
     }
     try {
       const [resDeudor, resGestiones] = await Promise.all([
-        fetch(`http://127.0.0.1:8000/deudores/${id}`, { headers: h }),
-        fetch(`http://127.0.0.1:8000/gestiones/deudor/${id}`, { headers: h })
+        fetch(`https://cobraflow-backend-production-6ef7.up.railway.app/deudores/${id}`, { headers: h }),
+        fetch(`https://cobraflow-backend-production-6ef7.up.railway.app/gestiones/deudor/${id}`, { headers: h })
       ])
       const d = await resDeudor.json()
       const g = await resGestiones.json()
@@ -49,7 +49,7 @@ export default function DeudorDetallePage() {
       'Authorization': `Bearer ${t}`
     }
     try {
-      await fetch('http://127.0.0.1:8000/gestiones/', {
+      await fetch('https://cobraflow-backend-production-6ef7.up.railway.app/gestiones/', {
         method: 'POST', headers: h,
         body: JSON.stringify({ ...nuevaGestion, deudor_id: id })
       })

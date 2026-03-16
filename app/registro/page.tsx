@@ -28,7 +28,7 @@ export default function RegistroPage() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('http://127.0.0.1:8000/auth/registro', {
+      const res = await fetch('https://cobraflow-backend-production-6ef7.up.railway.app/auth/registro', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -20,7 +20,7 @@ export default function ImportarPage() {
     formData.append('file', archivo)
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/deudores/importar-excel', {
+      const res = await fetch('https://cobraflow-backend-production-6ef7.up.railway.app/deudores/importar-excel', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formData
