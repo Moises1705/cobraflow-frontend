@@ -134,6 +134,14 @@ export default function LoginPage() {
           >
             {loading ? 'Iniciando...' : 'Iniciar sesión'}
           </button>
+
+          <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.875rem', color: '#64748b' }}>
+            ¿No tienes cuenta?{' '}
+            <span onClick={() => router.push('/registro')}
+              style={{ color: '#0f172a', fontWeight: '600', cursor: 'pointer', textDecoration: 'underline' }}>
+              Crear cuenta gratis
+            </span>
+          </p>
         </form>
       </div>
     </div>
