@@ -43,18 +43,7 @@ export default function DashboardPage() {
 
   return (
     <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <h1 style={{ fontSize: '1.5rem' }}>🦜</h1>
-          <h1 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#1e293b' }}>CobraFlow</h1>
-        </div>
-        <button
-          onClick={() => { localStorage.removeItem('token'); router.push('/login') }}
-          style={{ padding: '0.5rem 1rem', background: 'transparent', border: '1px solid #e2e8f0', borderRadius: '8px', cursor: 'pointer', color: '#64748b' }}
-        >
-          Cerrar sesión
-        </button>
-      </div>
+
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
         {[
