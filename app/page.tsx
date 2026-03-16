@@ -1,20 +1,25 @@
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
 export default function Home() {
+  const router = useRouter()
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      router.push('/dashboard')
+    } else {
+      router.push('/login')
+    }
+  }, [router])
+
   return (
     <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      background: '#f8fafc'
+      minHeight: '100vh', display: 'flex',
+      alignItems: 'center', justifyContent: 'center'
     }}>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#1e293b' }}>
-          🦜 CobraFlow
-        </h1>
-        <p style={{ color: '#64748b', marginTop: '1rem', fontSize: '1.2rem' }}>
-          CRM Financiero para gestoras de cobranza
-        </p>
-      </div>
+      <p style={{ color: '#64748b' }}>Cargando...</p>
     </div>
   )
 }
